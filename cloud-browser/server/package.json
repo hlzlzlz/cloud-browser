@@ -1,0 +1,16 @@
+{
+  "name": "cloud-browser-server",
+  "version": "1.2.8",
+  "description": "CloudBrowser server - headless Chrome + H.264 streaming + touch/IME bridge for dictionary pen",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT"
+}

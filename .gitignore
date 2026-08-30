@@ -1,0 +1,15 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# 构建产物
+.falcon_/
+*.amr.tmp
+
+# 系统
+.DS_Store
+*.swp
+
+# 服务器本地数据（设备注册等，勿上传）
+device.json
+*.log
