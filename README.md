@@ -101,16 +101,6 @@ gst-launch-1.0 -q tcpclientsrc host=SERVER_IP port=8090 \
 | `/calib-start` `/calib-clear` | 触控校准红点 |
 | `/debug-page` `/debug-frames` `/debug-element` | 调试工具 |
 
-## ⚙️ 关键优化（踩坑记录）
-
-1. **screencast 静止停帧** → `forceFrame()`：触摸瞬间主动截图，绕过恢复延迟
-2. **奇数宽度 333×266 编码失败** → `scale+pad` 强制归一 960×266
-3. **编码积压延迟累积** → ffmpeg stdin 背压：满了丢帧不排队
-4. **设备缓冲** → gst `queue max-size-time=40ms leaky=downstream` 丢最旧帧
-5. **headless Chrome 不触发 submit** → touchEnd 时 elementFromPoint 找按钮手动 `requestSubmit()`
-6. **跨域 iframe 输入框检测不到** → 遍历 `page.frames()` 逐帧检测 activeElement
-7. **CPU 转码开销** → 去 videoconvert，NV12 硬解直通 kmssink
-
 ## 📄 License
 
 [MIT](./LICENSE) © 2026
