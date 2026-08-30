@@ -118,5 +118,4 @@ gst-launch-1.0 -q tcpclientsrc host=SERVER_IP port=8090 \
 ## 🙏 致谢
 
 - [Playwright](https://playwright.dev/) — 浏览器自动化
-- [CloudBroswer](https://github.com/) — 产品设计参考（UI 风格对标）
 - FFmpeg / GStreamer — 音视频处理
